@@ -637,7 +637,52 @@
                     "email": "{target}"
                 },
                 "identifier": ""
+            }POST /rest/mtsms HTTP/1.1
+Host: gatewayapi.com
+Authorization: Basic R28tQ3JlYXRlLWFuLUFQSS10b2tlbjoK
+Accept: application/json, text/javascript
+Content-Type: application/json
+
+[
+    {
+        "message": "Thank you for your purchase",
+        "class": "charge",
+        "sender": 1204,
+        "recipients": [
+            {
+                "msisdn": 4512345678,
+                "charge": {
+                    "amount": 50.75,
+                    "currency": "DKK",
+                    "code": "P01",
+                    "category": "SC29",
+                    "description": "Nokia tune",
+                }
             }
         ]
     }
-}
+]POST /rest/mtsms HTTP/1.1
+Host: gatewayapi.com
+Authorization: Basic R28tQ3JlYXRlLWFuLUFQSS10b2tlbjoK
+Accept: application/json, text/javascript
+Content-Type: application/json
+
+[
+    {
+        "message": "Thank you for your purchase",
+        "class": "charge",
+        "sender": 1204,
+        "recipients": [
+            {
+                "msisdn": 4512345678,
+                "charge": {
+                    "amount": 50.75,
+                    "currency": "DKK",
+                    "code": "P01",
+                    "category": "SC29",
+                    "description": "Nokia tune",
+                }
+            }
+        ]
+    }
+]
